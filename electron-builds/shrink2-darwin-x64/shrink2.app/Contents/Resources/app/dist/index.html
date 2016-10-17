@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Shrink2</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+<meta name="shrink2/config/environment" content="%7B%22modulePrefix%22%3A%22shrink2%22%2C%22environment%22%3A%22production%22%2C%22rootURL%22%3Anull%2C%22locationType%22%3A%22hash%22%2C%22EmberENV%22%3A%7B%22FEATURES%22%3A%7B%7D%7D%2C%22APP%22%3A%7B%22name%22%3A%22shrink2%22%2C%22version%22%3A%220.0.0+10d9ab6c%22%7D%2C%22exportApplicationGlobal%22%3Afalse%7D" />
+<script>
+/* jshint browser: true */
+;(function (window) {
+  if (window && window.process && window.process.type) {
+    window.ELECTRON = true
+  }
+
+  window.requireNode = window.require
+  window.moduleNode = window.module
+  window.processNode = window.process
+
+  delete window.process
+  delete window.require
+  delete window.module
+})(this)
+
+</script>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.5.3/css/tachyons.min.css"/>
+    <link rel="stylesheet" href="assets/vendor-d41d8cd98f00b204e9800998ecf8427e.css" integrity="sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU= sha512-z4PhNX7vuL3xVChQ1m2AB9Yg5AULVxXcg/SpIdNs6c5H0NE8XYXysP+DGNKHfuwvY7kxvUdBeoGlODJ6+SfaPg==" >
+    <link rel="stylesheet" href="assets/shrink2-55ea1089dacfec104b440b9d67b3d2e3.css" integrity="sha256-OOFu0YugGX0TG/ga7sA0t8agwDKjVOiwFwIP7mhvCGo= sha512-A1B5p0VOJUoOEgM9dWEIvx2+WpCZ2Ytq43T4rqP/tBotxcsJzlmxucr7K7pVoYMmeW/5vPl0v+rR7UevE3D5Ew==" >
+
+    
+  </head>
+  <body>
+    
+
+    <script src="assets/vendor-0519d360a28216be6a7e8b6a2359912f.js" integrity="sha256-ahanROooWSiCCM3j0Do5xAMyKzGV1M9ntOhatEXMpq4= sha512-DVNb60ybTa1iWbsIfrwgTcK3zY2JiY4JcW0PgxUXNLU7jvW5gruGG6AUGG+QMd3JWBFn4GbQpRrwuWMhh7i/pQ==" ></script>
+    <script src="assets/shrink2-b43a4b33d2edcc074dc02a05f7295653.js" integrity="sha256-KyVfd5EZgZ3vM1+tLh3gfU1PAiOE6wRjbsdAWq80/oM= sha512-R6+L8u9EB0oezEdEDw4L5eAlAjPjkTw/iGmkWt0NBRUJKNkwMmfXDWt7SBo4PHZaswwU5nzczM2rb2YR6NOpGw==" ></script>
+
+    <script>
+/* jshint browser: true */
+;(function (window) {
+  if (!window.ELECTRON) {
+    return
+  }
+
+  // Restore Electron variables.
+  window.process = window.processNode
+
+  // Redefine a global `require` function that can satisfy both
+  // Node and AMD module systems.
+  const requireAMD = window.require
+  const requireNode = window.requireNode
+
+  if (requireAMD) {
+    window.require = function () {
+      try {
+        return requireAMD.apply(null, arguments)
+      } catch (e) {
+        if (e.toString().includes('Error: Could not find module')) {
+          return requireNode.apply(null, arguments)
+        } else {
+          return console.error(e)
+        }
+      }
+    }
+  } else {
+    window.require = requireNode
+  }
+})(this)
+
+</script>
+  </body>
+</html>

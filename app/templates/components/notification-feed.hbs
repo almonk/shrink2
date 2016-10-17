@@ -1,0 +1,11 @@
+{{#each model.mentions as |msg|}}
+  {{#mention-item msg=msg}}{{/mention-item}}
+{{/each}}
+
+{{#unless model.mentions}}
+  <div class="flex flex-column items-center justify-center drag" style="height:90vh">
+    <p class="o-40">
+      Nothing to do
+    </p>
+  </div>
+{{/unless}}

@@ -1,0 +1,44 @@
+<div class="flex flex-column">
+  <div class="flex flex-row">
+    <div class="msg__owner mr3 flex-1 mt3 ml3 mb3">
+      <img src="{{msg.repository.owner.avatar_url}}" width=48 height=48 alt="" />
+    </div>
+
+    <div class="bb b--light-silver flex flex-auto pv3">
+      <div class="flex flex-column flex-auto pr3">
+        <div class="flex">
+          <div class="msg__repo mb1 flex-auto">
+            <b>{{msg.repository.name}}</b>
+          </div>
+          <div class="msg__repo">
+            {{moment-calendar msg.updated_at}}
+          </div>
+        </div>
+        <div class="black no-underline b msg__title truncate" {{action 'openUrl' msg.html_url}}>
+          {{msg.title}} (#{{msg.number}})
+        </div>
+        {{#if msg.labels}}
+        <div class="mt1 msg__labels">
+          {{#each msg.labels as |label|}}
+          <div class="label dib">
+            <div class="label__dot" style="background:#{{unbound label.color}}"></div>
+            <span>{{label.name}}</span>
+          </div>
+          {{/each}}
+        </div>
+        {{/if}}
+
+        {{#if msg.body}}
+        <div class="msg__body {{if isExpanded 'msg__body--expanded'}}" {{action 'expand'}}>
+          {{md-text
+            text        = msg.body
+            typographer = false
+            linkify     = false
+            html = true
+          }}
+        </div>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>
