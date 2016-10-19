@@ -18,7 +18,7 @@
           {{msg.title}} (#{{msg.number}})
         </div>
         {{#if msg.labels}}
-        <div class="mt1 msg__labels">
+        <div class="mt1 msg__labels" {{action 'openUrl' msg.html_url}}>
           {{#each msg.labels as |label|}}
           <div class="label dib">
             <div class="label__dot" style="background:#{{unbound label.color}}"></div>
