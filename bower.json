@@ -5,6 +5,7 @@
     "ember-cli-shims": "0.1.1",
     "ember-qunit-notifications": "0.1.0",
     "remarkable": "^1.7.1",
-    "highlightjs": "^9.7.0"
+    "highlightjs": "^9.7.0",
+    "mousetrap": "~1.5.2"
   }
 }

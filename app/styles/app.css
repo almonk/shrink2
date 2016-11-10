@@ -29,9 +29,11 @@ html {
 
 .title-bar .menu a {
   font-size: 15px;
+  -webkit-app-region: no-drag;
   text-decoration: none;
   color: #383838;
   height: 38px;
+  margin-top: 4px;
   line-height: 32px;
   border-bottom: 2px solid #E2E2E2;
   cursor: default;
@@ -43,7 +45,7 @@ html {
 }
 
 .title-bar-spacer {
-  height: 60px;
+  height: 64px;
 }
 
 .msg__repo {
@@ -58,7 +60,7 @@ html {
   max-height: 83px;
   overflow: hidden;
   cursor: pointer;
-  transition: all .3s ease-in-out;
+  transition: all 0.6s cubic-bezier(0,1,.36,1);
   position: relative;
   color: #484848;
 }
@@ -70,7 +72,7 @@ html {
   position:absolute;
   left:0;
   bottom:0;
-  transition: all .3s ease-in-out;
+  transition: all 0.6s cubic-bezier(0,1,.36,1);
   background:linear-gradient(transparent, #F2F2F2);
 }
 
@@ -119,6 +121,11 @@ html {
 
 .msg__body ul li {
   margin-bottom: 6px;
+  line-height: 16px;
+}
+
+.msg__body h1,h2,h3,h4 {
+  font-size: 14px;
 }
 
 .msg__body.msg__body--expanded {
