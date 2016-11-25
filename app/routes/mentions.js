@@ -12,6 +12,7 @@ export default Ember.Route.extend({
         if (error === 'Unauthorized') {
           this.transitionTo('login');
           console.log(error);
+          alert('Could not authenticate');
         }
       }.bind(this));
     }.bind(this));

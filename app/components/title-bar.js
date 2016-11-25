@@ -1,18 +1,32 @@
 import Ember from 'ember';
+const Mousetrap = require('mousetrap');
 
 export default Ember.Component.extend({
+  init() {
+    this._super(...arguments);
+    this.errors = [];
+    Mousetrap.bind('meta+1', function() {
+      this.send('goToMentioned');
+    }.bind(this));
+
+    Mousetrap.bind('meta+2', function() {
+      this.send('goToAssigned');
+    }.bind(this));
+
+    Mousetrap.bind('meta+3', function() {
+      this.send('goToSubscribed');
+    }.bind(this));
+  },
+
   actions :{
     goToMentioned: function() {
       this.get('router').transitionTo('mentions');
-      console.log('GO');
     },
     goToAssigned: function() {
       this.get('router').transitionTo('assigned');
-      console.log('GO');
     },
     goToSubscribed: function() {
       this.get('router').transitionTo('subscribed');
-      console.log('GO');
     }
   }
 });

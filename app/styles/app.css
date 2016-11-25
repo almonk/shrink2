@@ -60,9 +60,9 @@ html {
   max-height: 83px;
   overflow: hidden;
   cursor: pointer;
-  transition: all 0.6s cubic-bezier(0,1,.36,1);
   position: relative;
   color: #484848;
+  transition: all 0.4s ease-in-out;
 }
 
 .msg__body:after {
@@ -72,7 +72,6 @@ html {
   position:absolute;
   left:0;
   bottom:0;
-  transition: all 0.6s cubic-bezier(0,1,.36,1);
   background:linear-gradient(transparent, #F2F2F2);
 }
 
@@ -145,6 +144,26 @@ html {
   font-size: 12px;
 }
 
+.msg__body table {
+  border-radius: 4px;
+  width: 100%;
+  overflow: hidden;
+  margin: 10px 0;
+  padding: 0;
+  border-collapse: collapse;
+}
+
+.msg__body table th {
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+  padding: 0px;
+  text-align: left;
+}
+
+.msg__body table td, .msg__body table th {
+  padding: 4px;
+  margin: 0px;
+}
+
 .b--light-silver {
   border-color: #E2E2E2;
 }
@@ -170,4 +189,9 @@ html {
 
 .msg__title {
   color: #383838!important;
+}
+
+.list {
+  height: calc(100vh - 64px);
+  overflow: scroll;
 }

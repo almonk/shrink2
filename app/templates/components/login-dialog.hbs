@@ -4,11 +4,10 @@
     <p class="mb2 o-40">
       Enter a personal access token below
     </p>
-    {{input value=authToken class="mb2 flex-auto"}}
-    <button class="flex-auto mb2" {{action 'signIn'}}>Sign in</button>
+    {{input action='signIn' value=authToken class="mb2 flex-auto"}}
   </div>
   <div class="flex-auto"></div>
   <div class="pa2 ma2">
-    <a href="#" {{action 'openUrl' 'https://github.com/settings/tokens/new'}}>Create a token</a>
+    <a href="#" class="blue no-underline" {{action 'openUrl' 'https://github.com/settings/tokens/new'}}>Create a token on Github</a>
   </div>
 </div>
