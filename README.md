@@ -1,7 +1,10 @@
-# Shrink2
+# Shrink
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Shrink is an OSX client for your Github issues. Easily sort between issues and pull requests you've been mentioned in, assigned or subscribed to.
+
+[Download for OSX](https://github.com/almonk/shrink2/releases)
+
+![](http://almonk-share.s3-eu-west-1.amazonaws.com/ElGPItG7jv/dfsdsf.png)
 
 ## Prerequisites
 
