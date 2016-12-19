@@ -1,6 +1,6 @@
 # Shrink
 
-Shrink is an OSX client for your Github issues. Easily sort between issues and pull requests you've been mentioned in, assigned or subscribed to.
+Shrink is an macOS client for your Github issues. Easily sort between issues and pull requests you've been mentioned in, assigned or subscribed to.
 
 [Download for macOS](https://github.com/almonk/shrink2/releases)
 
